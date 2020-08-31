@@ -56,9 +56,9 @@ public final class DbTool {
         Connection toReturn = null;
         Map<String, String> result = getProperties();
             if (result.isEmpty()) {
-                result.put("URL", "jdbc:mariadb://host.docker.internal:32789");
+                result.put("URL", "jdbc:mariadb://172.19.160.1:3308");
                 result.put("username", "trym");
-                result.put("password", "passord");
+                result.put("password", "12345");
             }
         try {
             toReturn = (connection != null)
