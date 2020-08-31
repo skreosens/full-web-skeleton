@@ -10,7 +10,7 @@ password=12345
 
 URL=jdbc:mariadb://172.19.160.1:3308
 
-#### NB!: jdbc:mariadb://<dinMariaDbIP og port>
+#### NB!: jdbc:mariadb://dinMariaDbIP og port
 
 ## Hvor finner jeg ip og port til min mariadb?
 ### På windows:
@@ -22,6 +22,8 @@ Kopier ipv4 herfra og lim inn i URL=<ip + port> i config.properties.
 
 Denne filen vil bli lastet opp til payara sitt fil-system hver gang du bygger slik at applikasjonen kan lese filen der ifra. 
 
+### På linux / Os X
+coming soon.
 
 ## setup windows spesifikt
 Kjør setup.cmd
