@@ -1,10 +1,11 @@
 # Web-skeleton med fungerenede jdbc for mariadb
 
 ## setup Windows && OS x/linux
-se i config.properties og endre variablene til ditt database brukernavn og passord samt porten du kjører mariadb på.
-gå så til src/main/java/tools/DbTool.java gjør den samme endringen i public Connection dbLoggIn(PrintWriter out) metoden.
+Se i config.properties og endre variablene til ditt database brukernavn og passord samt porten du kjører mariadb på.
+Gå så til src/main/java/tools/DbTool.Java
+Gjør den samme endringen i public Connection dbLoggIn(PrintWriter out) metoden.
 linje 59 -61.
-i metoden getProperties() endre parameter til din config.properties path.
+I metoden getProperties() må dere endre parameter til din config.properties path.
 
 ## setup windows spesifikt
 kjør setup.cmd
