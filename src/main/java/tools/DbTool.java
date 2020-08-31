@@ -71,11 +71,7 @@ public final class DbTool {
     public Connection dbLoggIn(PrintWriter out) throws SQLException {
         Connection toReturn = null;
         Map<String, String> result = getProperties();
-          //  if (result.isEmpty()) {
-            //    result.put("URL", "jdbc:mariadb://172.19.160.1:3308");
-              //  result.put("username", "trym");
-             //   result.put("password", "12345");
-           // }
+
 
         try {
             toReturn = (connection != null)
@@ -84,7 +80,7 @@ public final class DbTool {
                     result.get("URL"),
                     result.get("username"),
                     result.get("password"));
-            System.out.println("is it working?");
+           
         } catch (SQLException e) {
             e.printStackTrace();
             out.println("SQL Exception " + e);
