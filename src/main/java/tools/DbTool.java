@@ -1,6 +1,8 @@
 package tools;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -9,11 +11,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Properties;
 
 public final class DbTool {
     private static final tools.DbTool INSTANCE = new tools.DbTool();
     static Connection connection;
+    static String payara = "/opt/payara/config.properties";
 
     /**
      * initiates the class as a singleton.
@@ -26,24 +30,36 @@ public final class DbTool {
 
     private static Map<String, String> getProperties() {
         Map<String, String> result = new HashMap<>();
-        try (InputStream input = new FileInputStream("C:/Users/tryme/Go/src/github.com/Nosp1/TA/web-app-skeleton-with-db/src/config.properties")) {
+
+
+        try (InputStream input = new FileInputStream(payara)) {
             Properties prop = new Properties();
+
             prop.load(input);
             result.put("username", prop.getProperty("username"));
             result.put("password", prop.getProperty("password"));
             result.put("URL", prop.getProperty("URL"));
         } catch (IOException ex) {
             ex.printStackTrace();
+
         }
         return result;
 
     }
-   public static void main(String[] args) {
-        Map<String, String> map = getProperties();
-        for(String s: map.keySet()) {
-            System.out.println(map.get("URL"));
+
+    /**
+     *  used to list all files in current working directory on payara
+     *  call this method inside getProperties() if needed.
+     */
+    private static void printFilesInFolder() {
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+        File file = new File(System.getProperty("user.dir"));
+        String [] contents = file.list();
+
+        for (int i = 0; i < Objects.requireNonNull(contents).length; i++) {
+            System.out.println(contents[i]);
         }
-   }
+    }
 
     /**
      * Establishes a connection with a mariaDB or returns an existing one.
@@ -55,11 +71,12 @@ public final class DbTool {
     public Connection dbLoggIn(PrintWriter out) throws SQLException {
         Connection toReturn = null;
         Map<String, String> result = getProperties();
-            if (result.isEmpty()) {
-                result.put("URL", "jdbc:mariadb://172.19.160.1:3308");
-                result.put("username", "trym");
-                result.put("password", "12345");
-            }
+          //  if (result.isEmpty()) {
+            //    result.put("URL", "jdbc:mariadb://172.19.160.1:3308");
+              //  result.put("username", "trym");
+             //   result.put("password", "12345");
+           // }
+
         try {
             toReturn = (connection != null)
                 ? connection
@@ -67,7 +84,7 @@ public final class DbTool {
                     result.get("URL"),
                     result.get("username"),
                     result.get("password"));
-
+            System.out.println("is it working?");
         } catch (SQLException e) {
             e.printStackTrace();
             out.println("SQL Exception " + e);
