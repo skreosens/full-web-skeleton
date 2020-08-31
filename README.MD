@@ -1,5 +1,10 @@
 # Web-skeleton med fungerenede jdbc for mariadb
 
+## git clone eller fork
+Før du begynner må du clone prosjektet ned lokalt.
+Enten kan du direkte clone mitt prosjekt eller forke det (anbefales) ved å trykke på fork i høyre marg. 
+Ved å forke får du en direkte kopi av mitt repository, bare at det er ditt eget
+
 ## setup Windows && OS x/linux
 Se i config.properties og endre variablene til ditt database-brukernavn og passord samt porten du kjører mariadb på.
 Eksempel:
