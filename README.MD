@@ -1,7 +1,7 @@
 # Web-skeleton med fungerenede jdbc for mariadb
 
 ## setup Windows && OS x/linux
-Se i config.properties og endre variablene til ditt database brukernavn og passord samt porten du kjører mariadb på.
+Se i config.properties og endre variablene til din database brukernavn og passord samt porten du kjører mariadb på.
 denne filen vil bli lastet opp til payara sitt fil-system hver gang du bygger slik at applikasjonen kan lese filen der ifra. 
 
 
