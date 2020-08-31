@@ -2,10 +2,7 @@
 
 ## setup Windows && OS x/linux
 Se i config.properties og endre variablene til ditt database brukernavn og passord samt porten du kjører mariadb på.
-Gå så til src/main/java/tools/DbTool.Java
-Gjør den samme endringen i public Connection dbLoggIn(PrintWriter out) metoden.
-linje 59 -61.
-I metoden getProperties() må dere endre parameter til din config.properties path.
+denne filen vil bli lastet opp til payara sitt fil-system hver gang du bygger slik at applikasjonen kan lese filen der ifra. 
 
 
 ## setup windows spesifikt
