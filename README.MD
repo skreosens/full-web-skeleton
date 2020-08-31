@@ -31,6 +31,7 @@ Denne filen vil bli lastet opp til payara sitt fil-system hver gang du bygger sl
 coming soon.
 
 ## setup windows spesifikt
+(om du ikke får lov av powershell å kjøre skriptet: Start terminal i administrator og paste inn dette: Set-ExecutionPolicy -ExecutionPolicy Unrestricted)
 Kjør setup.cmd
 
 Naviger til dabaseSkript og kjør skriptet. Det vil bygge databasen din om du ikke allerde har en.
