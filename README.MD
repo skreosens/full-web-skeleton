@@ -17,3 +17,6 @@ da skal applikasjonen funke på localhost:8080/Skeleton-1.0/
 kjør setup.sh
 kjør build.sh
 da skal applikasjonen funke på localhost:8080/Skeleton-1.0/
+
+
+## Takk til Eirik https://github.com/MysticUser for debugging og krossplatform testing!
