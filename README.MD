@@ -7,14 +7,17 @@ Gjør den samme endringen i public Connection dbLoggIn(PrintWriter out) metoden.
 linje 59 -61.
 I metoden getProperties() må dere endre parameter til din config.properties path.
 
+
 ## setup windows spesifikt
 kjør setup.cmd
+naviger til dabaseSkript og kjør skriptet. Det vil bygge databasen din om du ikke allerde har en.
 kjør build.cmd
 da skal applikasjonen funke på localhost:8080/Skeleton-1.0/
 
 
 ## setup for linux og os x
 kjør setup.sh
+naviger til dabaseSkript og kjør skriptet. Det vil bygge databasen din om du ikke allerde har en.
 kjør build.sh
 da skal applikasjonen funke på localhost:8080/Skeleton-1.0/
 
