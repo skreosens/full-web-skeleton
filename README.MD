@@ -18,6 +18,11 @@ URL=jdbc:mariadb://172.19.160.1:3308
 #### NB!: jdbc:mariadb://dinMariaDbIP og port
 
 ## Hvor finner jeg ip og port til min mariadb?
+### VIA docker:
+åpne terminal og og skriv: Docker network inspect bridge,
+her finner dere alle applikasjonene og hvilke porter de kjører på. 
+kopier så ipen til mariaDb og lim inn i config.properties.
+
 ### På windows:
 Åpne terminal/powershell skriv ipconfig.
 
