@@ -85,5 +85,5 @@ Da skal du få noe som ligner på: `default via 172.17.0.1 dev eth0`
 > Da skal applikasjonen funke på http://localhost:8080/Skeleton-1.0/
 
 
-## Takk til [Eirik](https://github.com/MysticUser) for debugging og krossplatform testing!
+## Takk til [Eirik](https://github.com/MysticUser) for debugging,skripting,markdown-skills og krossplatform testing!
 
