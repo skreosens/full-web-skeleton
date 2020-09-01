@@ -10,14 +10,27 @@ import javax.servlet.http.HttpServletResponse;
 
 import tools.repository.UserRepository;
 
+
 @WebServlet(name= "ReceiveUserNameFromDb", urlPatterns = {"/ReceiveUserNameFromDb"})
 public class ReceiveUserNameFromDb extends AbstractAppServlet {
+    /**
+     * Tar imot http requesten og kaller på writeResponse()
+     * @param request objektet sender data til servletet
+     * @param response objektet sender data fra servleten.
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         writeResponse(request, response, "Hello!");
     }
 
+    /**
+     * skriver ut body på servlet som html.
+     * @param req http request objektet med data.
+     * @param out http respons objektet som sender data.
+     */
     @Override
     protected void writeBody(HttpServletRequest req, PrintWriter out) {
         String username = req.getParameter("uname");
@@ -33,6 +46,15 @@ public class ReceiveUserNameFromDb extends AbstractAppServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     */
+
+    /**
+     * Alle get forespørsler til denne servleten blir håndert av doGEt.
+     * får servleten en Get request vil den svare med doGet som kaller på metoden process Request.
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException
+     * @throws IOException
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

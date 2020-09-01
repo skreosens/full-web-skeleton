@@ -17,6 +17,7 @@ import java.util.Properties;
 public final class DbTool {
     private static final tools.DbTool INSTANCE = new tools.DbTool();
     static Connection connection;
+    //path til config.properties på payara server
     static String payara = "/opt/payara/config.properties";
 
     /**
@@ -28,6 +29,12 @@ public final class DbTool {
         return INSTANCE;
     }
 
+    /**
+     * HashMap som leser over config.properties og lagrer
+     * username, password og url til databasen for å lage en kobling.
+     *
+     * @return et hashmap med username, password og url til databasen.
+     */
     private static Map<String, String> getProperties() {
         Map<String, String> result = new HashMap<>();
 
@@ -50,6 +57,7 @@ public final class DbTool {
     /**
      *  used to list all files in current working directory on payara
      *  call this method inside getProperties() if needed.
+     *  useful for debugging paths on payara server.
      */
     private static void printFilesInFolder() {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
