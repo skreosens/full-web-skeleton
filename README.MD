@@ -21,7 +21,7 @@ URL=jdbc:mariadb://172.19.160.1:3308
 ### VIA docker:
 åpne terminal og og skriv: Docker network inspect bridge,
 her finner dere alle applikasjonene og hvilke porter de kjører på. 
-kopier så ipen til mariaDb og lim inn i config.properties.
+kopier så ipen under Gateway og lim inn i config.properties.
 
 ### På windows:
 Åpne terminal/powershell skriv ipconfig.
